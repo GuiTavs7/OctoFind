@@ -1,12 +1,12 @@
 // Importando serviços
 
-import { fetchUser } from "/src/scripts/services/user.js";
-import { getRepositories } from "/src/scripts/services/repositories.js";
+import { fetchUser } from "./services/user.js";
+import { getRepositories } from "./services/repositories.js";
 
 // Importando objetos
 
-import { user } from "/src/scripts/objects/user.js";
-import { screen } from "/src/scripts/objects/screen.js";
+import { user } from "./objects/user.js";
+import { screen } from "./objects/screen.js";
 
 // 1) Criando o evento de buscar os dados do usuário através do clique do botão
 
