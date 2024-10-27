@@ -7,12 +7,18 @@ const screen = {
         // Usuário
 
         this.userProfile.innerHTML = `<div class = "info">
-                            <img src = "${user.avatarUrl}" alt = "Foto do perfil usuário" />
-                            <div class = "data">
-                                    <h1>${user.name ?? "Não possui nome cadastrado 😢"}</h1>
-                                    <p>${user.bio ?? "Não possui bio cadastrada 😢"}</p>
-                            </div>
-                        </div>`
+
+                                        <img src = "${user.avatarUrl}" alt = "Foto do perfil usuário" />
+
+                                        <div class = "data">
+                                            <h1>${user.name ?? "Não possui nome cadastrado 😢"}</h1>
+                                            <p>${user.bio ?? "Não possui bio cadastrada 😢"}</p>
+                                        </div>
+
+                                        <p>Seguidores ${user.followers  ?? "Não possui seguidores 😢"}</p>
+                                        <p>Seguindo ${user.following ?? "Não segue ninguém ainda 😢"}</p>
+
+                                    </div>`
 
         // Repositórios
 
