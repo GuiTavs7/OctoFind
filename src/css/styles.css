@@ -121,6 +121,27 @@ main {
   line-height: 23px;
 }
 
+.container .profile-data .info .follow{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.container .profile-data .info .follow p{
+  width: 180px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .info .follow p:hover{
+  background-color:hotpink;
+  color: #fff;
+}
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{

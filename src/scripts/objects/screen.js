@@ -15,8 +15,11 @@ const screen = {
                                             <p>${user.bio ?? "Não possui bio cadastrada 😢"}</p>
                                         </div>
 
-                                        <p>Seguidores ${user.followers  ?? "Não possui seguidores 😢"}</p>
-                                        <p>Seguindo ${user.following ?? "Não segue ninguém ainda 😢"}</p>
+
+                                        <div class = "follow">
+                                            <p>👥 Seguidores: ${user.followers  ?? "Não possui seguidores 😢"}</p>
+                                            <p>🤝 Seguindo: ${user.following ?? "Não segue ninguém ainda 😢"}</p>
+                                        </div>
 
                                     </div>`
 
