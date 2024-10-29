@@ -173,6 +173,26 @@ main {
   display: none;
 }
 
+/* EVENTS */
+
+.container .profile-data .events h2{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.container .profile-data .events ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .profile-data .events ul li a:hover{
+  background-color:hotpink;
+  color: #fff
+}
+
+
 @media (max-width: 1280px) {
   .container {
     flex-direction: column;

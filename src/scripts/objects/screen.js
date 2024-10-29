@@ -35,6 +35,26 @@ const screen = {
                                                 <ul>${repositoriesItens}</ul>
                                             </div>`
         }
+
+        let eventsItens = ""
+
+        user.events.filter(event => event.type === "CreateEvent" || event.type === "PushEvent").forEach(event => {
+            if (event.type === "PushEvent"){
+                eventsItens += `<li>Push no repositório <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}></a></li>`;
+                console.log(eventsItens);
+            }
+            else if (event.type === "CreateEvent"){
+                eventsItens += `<li>Create ${event.payload.ref_type} no repositório <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a>(Sem mensagem de commit!)</li>`;
+            }
+        });
+
+        if (eventsItens){
+            this.userProfile.innerHTML += ` <div class="events section">
+                                                <h2>Eventos</h2>
+                                                <ul>${eventsItens}</ul>
+                                            </div>`;
+        }
+
     },
 
     renderNotFound(){
