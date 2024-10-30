@@ -176,14 +176,14 @@ main {
 /* EVENTS */
 
 .container .profile-data .events h2{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .container .profile-data .events ul{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  gap:20px;
   justify-content: center;
 }
 

@@ -40,11 +40,11 @@ const screen = {
 
         user.events.filter(event => event.type === "CreateEvent" || event.type === "PushEvent").forEach(event => {
             if (event.type === "PushEvent"){
-                eventsItens += `<li>Push no repositório <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}></a></li>`;
+                eventsItens += `<li> Push no repositório <a href="https://github.com/${event.repo.name}" target="_blank"> ${event.repo.name}</a> ${event.payload.commits.slice(-1)[0].message} </li>`;
                 console.log(eventsItens);
             }
             else if (event.type === "CreateEvent"){
-                eventsItens += `<li>Create ${event.payload.ref_type} no repositório <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a>(Sem mensagem de commit!)</li>`;
+                eventsItens += `<li> Create ${event.payload.ref_type} (Sem mensagem de commit!) </li>`;
             }
         });
 
