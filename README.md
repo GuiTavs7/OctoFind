@@ -23,6 +23,8 @@ O usuário pode buscar os principais dados e repositórios de qualquer usuário 
 <div align="center">
     <img src="./src/images/desktop_begin.png" alt="design do projeto no desktop">
     <img src="./src/images/desktop_search.png" alt="design do projeto no desktop">
+    <img src="./src/images/desktop_repos.png" alt="design do projeto no desktop">
+    <img src="./src/images/desktop_events.png" alt="design do projeto no desktop">
 </div>
 
 ## Design Mobile
@@ -31,6 +33,8 @@ O usuário pode buscar os principais dados e repositórios de qualquer usuário 
     <img src="./src/images/mobile_begin.png" alt="design do projeto no mobile">
     <img src="./src/images/mobile_search.png" alt="design do projeto no mobile">
     <img src="./src/images/mobile_search_2.png" alt="design do projeto no mobile">
+    <img src="./src/images/mobile_repos.png" alt="design do projeto no mobile">
+    <img src="./src/images/mobile_repos.png" alt="design do projeto no mobile">
 </div>
 
 ## Como Utilizar
