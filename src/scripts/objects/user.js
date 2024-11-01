@@ -1,3 +1,5 @@
+// OBJETO PARA AJUNTAR TODAS PROPRIEDADES DO USUÁRIO
+
 const user = {
     avatarUrl: '',
     name: '',

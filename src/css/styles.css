@@ -1,4 +1,8 @@
+/* IMPORTAÇÃO DA FONTE */
+
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* ESTILOS PARA O DOCUMENTO HTML */
 
 * {
   margin: 0;
@@ -85,6 +89,8 @@ main {
   border-color: #ffffff;
 }
 
+/* INFORMAÇÕES DO USUÁRIO */
+
 .container .profile-data{
   display: flex;
   flex-direction: column;
@@ -121,6 +127,8 @@ main {
   line-height: 23px;
 }
 
+/* INFORMAÇÕES DO USUÁRIO - SEGUIDORES */
+
 .container .profile-data .info .follow{
   width: 100%;
   display: flex;
@@ -142,7 +150,12 @@ main {
   color: #fff;
 }
 
-/* REPOSITORIES */
+/* REPOSITÓRIOS DO USUÁRIO */
+
+.container .profile-data .repositories{
+  display: flex;
+  flex-direction: column;
+}
 
 .container .profile-data .repositories h2{
   margin-bottom: 30px;
@@ -155,8 +168,8 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
-  padding: 20px;
+.container .profile-data .repositories ul li{
+  padding: 10px;
   border: 1px solid grey;  
   margin: 20px;
   display: block;
@@ -164,18 +177,38 @@ main {
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
+.container .profile-data .repositories ul li:hover{
   background-color:hotpink;
-  color: #fff
+  color: #fff;
 }
 
 .container .profile-data.hide{
   display: none;
 }
 
-/* EVENTS */
+.container .profile-data .repositories ul li .repo-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container .profile-data .repositories ul li .repo-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.container .profile-data .repositories ul li p{
+  padding: 5px;
+  background-color: slateblue;
+  border-radius: 5px;
+}
+
+/* EVENTOS DO USUÁRIO */
 
 .container .profile-data .events h2{
+  margin-top: -80px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -183,54 +216,25 @@ main {
 .container .profile-data .events ul{
   display: flex;
   flex-direction: column;
-  gap:20px;
   justify-content: center;
+}
+
+.container .profile-data .events ul li{
+  padding: 10px;
+  border: 1px solid grey;  
+  margin: 10px;
+  display: block;
+  border-radius: 7px;
+}
+
+.container .profile-data .events ul li a{
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
 
 .container .profile-data .events ul li a:hover{
   background-color:hotpink;
-  color: #fff
-}
-
-
-@media (max-width: 1280px) {
-  .container {
-    flex-direction: column;
-    width: 90%;
-    border-radius: 20px;
-  }
-
-  .container header {
-    width: 100%;
-  }
-
-  .container header h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .container header #input-search,
-  .container header #btn-search
-  {
-    width: 100%;
-  }
-}
-
-@media (max-width: 425px) {
-  main {
-    padding: 15% 0;    
-  }
-
-  .container .profile-data .info img{
-    margin-bottom: 20px;
-  }
-
-  .container .profile-data .info img,
-  .container .profile-data .info .data
-  {
-    width: 100%;
-    padding: 0;
-  }
+  color: #fff;
+  padding: 5px;
+  border-radius: 7px;
 }
