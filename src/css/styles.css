@@ -186,6 +186,11 @@ main {
   display: none;
 }
 
+.container .profile-data .repositories ul li:hover{
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+
 .container .profile-data .repositories ul li .repo-container{
   display: flex;
   flex-direction: column;
