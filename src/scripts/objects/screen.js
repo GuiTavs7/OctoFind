@@ -36,10 +36,10 @@ const screen = {
                                                                         <a href="${repo.html_url}" target = "_blank">${repo.name}</a>
 
                                                                         <div class="repo-info">
-                                                                            <p>🍴 ${repo.forks_count}</p>
-                                                                            <p>🌟 ${repo.stargazers_count}</p>
-                                                                            <p>👀 ${repo.watchers_count}</p>
-                                                                            <p>💻 ${repo.language}</p>                                                                                                                                    
+                                                                            <p>🍴 ${repo.forks_count ?? "Sem forks 😢"}</p>
+                                                                            <p>🌟 ${repo.stargazers_count ?? "Sem estrelas 😢"}</p>
+                                                                            <p>👀 ${repo.watchers_count ?? "Sem observadores 😢"}</p>
+                                                                            <p>💻 ${repo.language ?? "Sem linguagem 😢"}</p>                                                                                                                                    
                                                                         </div>
 
                                                                     </div>
@@ -58,18 +58,20 @@ const screen = {
 
         let eventsItens = ""
 
-        user.events.filter(event => event.type === "CreateEvent" || event.type === "PushEvent").forEach(event => {
-
-            if (event.type === "PushEvent"){
-                eventsItens += `<li> <a href="https://github.com/${event.repo.name}" target="_blank"> ${event.repo.name}</a> - ${event.payload.commits.slice(-1)[0].message} </li>`;
-                console.log(eventsItens);
+        user.events.forEach(event =>{
+            if(event.type === "PushEvent"){
+                eventsItens += `<li>
+                                    <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a>
+                                    <p> -- ${event.payload.commits[0].message}</p>
+                                </li>`
             }
-
-            else if (event.type === "CreateEvent"){
-                eventsItens += `<li> Create ${event.payload.ref_type} (Sem mensagem de commit!) </li>`;
+            else{
+                eventsItens += `<li>
+                                    <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a>
+                                    <p> -- Criado um ${event.payload.ref_type}</p>
+                                </li>`
             }
-
-        });
+        })
 
         if (eventsItens){
             this.userProfile.innerHTML += ` <div class="events section">

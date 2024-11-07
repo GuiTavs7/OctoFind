@@ -240,6 +240,6 @@ main {
 .container .profile-data .events ul li a:hover{
   background-color:hotpink;
   color: #fff;
-  padding: 5px;
+  padding: 3px;
   border-radius: 7px;
 }
